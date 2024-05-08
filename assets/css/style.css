@@ -25,29 +25,57 @@ html{
     height: 46px;
     background-color: #000;
 }
-#nav{
-
+#nav,.subnav{
+    list-style-type: none;
 }
-#nav li{
+#nav > li
+{
     display: inline-block;
 }
-#nav li a{
+#nav li{    
+    position: relative;
+}
+/* cap 1 */
+#nav > li > a
+{
     color:#fff;
+    text-transform: uppercase;
+}
+/* cap 2 */
+#nav li a{
+    
     text-decoration: none;
     line-height: 46px;
     padding: 0 24px;
-    display: inline-block;
+    display: block;
 }
-#nav li:hover a{
+#nav li:hover .subnav{
+    display: block;
+}
+#nav .subnav li:hover a,
+#nav > li:hover > a
+{
     color: #000;
     background-color: #ccc;
 }
+
 #nav .subnav{
     display: none;
+    min-width: 160px;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    top: 100%;
+    left: 0;
+}
+#nav .subnav a {
+    color: #000;
+    line-height: 38px;
 }
 
 #slider{
-
+    min-height: 500px;
+    /* background-color: #333; */
 }
 
 #content{
