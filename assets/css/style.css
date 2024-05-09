@@ -275,9 +275,11 @@ img{
     padding: 11px 16px;
     display: inline-block;
     margin-top: 15px;
+    border: none;
 }
 .place-buy-btn:hover
 {
+    cursor: pointer;
     color: #000;
     background-color: #ccc;
 }
@@ -310,6 +312,8 @@ img{
     width: 900px;
     max-width: calc(100% - 32px);
     min-height: 200px;
+    -webkit-animation: modelFadeIn ease .5s;
+            animation: modelFadeIn ease .5s;
 }
 .model-close{
     position: absolute;
@@ -360,6 +364,7 @@ img{
     padding: 18px;
     display: block;
     text-align: center;
+    
 }
 #buy-tickets:hover
 {
@@ -374,4 +379,27 @@ img{
 }
 .model-footer a{
     color: #2196F3;
+}
+
+
+@-webkit-keyframes modelFadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes modelFadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to{
+        opacity: 1;
+    }
 }

@@ -99,7 +99,7 @@
                                 <h3 class="place-heading">New York</h3>
                                 <p class="place-time">Fri 27 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="place-buy-btn">Buy Tickets</a>
+                                <button class="place-buy-btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="place-item">
@@ -108,7 +108,7 @@
                                 <h3 class="place-heading">Paris</h3>
                                 <p class="place-time">Sat 28 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="place-buy-btn">Buy Tickets</a>
+                                <button class="place-buy-btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="place-item">
@@ -117,7 +117,7 @@
                                 <h3 class="place-heading">San Francisco</h3>
                                 <p class="place-time">Sun 29 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="place-buy-btn">Buy Tickets</a>
+                                <button class="place-buy-btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="clear"></div>
@@ -142,9 +142,9 @@
         </div>
 
     </div>
-    <div class="model">
-        <div class="model-container">
-            <div class="model-close">
+    <div class="model js-model">
+        <div class="model-container js-model-container">
+            <div class="model-close js-model-close">
                 <i class="ti-close"></i>
             </div>
             <header class="model-header">
@@ -174,5 +174,27 @@
             </footer>
         </div>
     </div>
+    <script>
+        const buyBtns = document.querySelectorAll(".js-buy-ticket");
+        const model = document.querySelector('.js-model');
+        const modelContainer = document.querySelector('.js-model-container')
+        const modelCLose = document.querySelector('.js-model-close');
+        function showBuyTickets() {
+            model.classList.add('open');
+        }
+        function hideBuyTickets(){
+            model.classList.remove('open');
+        }
+        for (const buyBtn of buyBtns) {
+            buyBtn.addEventListener('click',showBuyTickets);
+        }
+
+        modelCLose.addEventListener('click',hideBuyTickets);
+
+        model.addEventListener('click',hideBuyTickets);
+        modelContainer.addEventListener('click',(event) => {
+            event.stopPropagation();
+        })
+    </script>
 </body>
 </html>
