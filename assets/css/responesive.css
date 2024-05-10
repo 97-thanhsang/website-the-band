@@ -10,14 +10,8 @@
 
 /* MOBILE */
 @media (max-width:740px) {
-    #nav{
-        display: block;
-    }
-    #nav > li {
-        display: block;
-    }
-    #nav > li:first-child{
-        display: inline-block;
+    #header {
+        overflow: hidden;
     }
     #header .search-btn{
         display: none;
@@ -25,4 +19,25 @@
     #header .mobile-menu-btn{
         display: block;
     }
+    #nav{
+        display: block;
+    }
+    #nav li a {
+        padding: 1px 24px;
+    }
+    #nav > li {
+        display: block;
+    }
+    #nav > li:first-child{
+        display: inline-block;
+    }
+    #nav .subnav{
+        position: initial;
+        background-color: #333;
+    }
+    #nav .subnav a{
+        color: #fff;
+        padding: 5px 41px;
+    }
+
 }
