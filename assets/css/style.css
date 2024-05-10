@@ -1,88 +1,4 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-html{
-    scroll-behavior: smooth;
-    font-family: Helvetica,Arial,sans-serif;
-}
-ul{
-    list-style-type: none;
-}
-img{
-    width: 100%;
-}
-/*
-    1.  Từ ngoài vào trong
-    2.  Từ trên xuống dưới
-    3.  Tổng quan đến chi tiết
-*/
-/*
-    1.  Vị trí
-    2.  Kích thước
-    3.  Màu sắc
-    4.  Kiểu dáng 
-*/
-.clear
-{
-    clear: both;
-}
-.pull-right{
-    float: right!important;
-}
-.text-center{
-    text-align: center!important;
-}
-.text-white{
-    color: #fff!important;
-}
-.row{
-    margin-left: -8px;
-    margin-right: -8px;
-}
-.row::after{
-    content: "";
-    display: block;
-    clear: both;
-}
-.col{
-    float: left;
-    padding-left: 8px;
-    padding-right: 8px;
-}
-.col-3{
-    width: 33.33333%;
-}
-.col-2{
-    width: 50%;
-}
-.col-1{
-    width: 100%;
-}
 
-.mt-8{
-    margin-top: 8px!important;
-}
-.mt-16{
-    margin-top: 16px!important;
-}
-
-.btn{
-    color: #fff;
-    background-color: #000;
-    text-decoration: none;
-    padding: 11px 16px;
-    display: inline-block;
-    margin-top: 15px;
-    border: none;
-}
-.btn:hover
-{
-    cursor: pointer;
-    color: #000;
-    background-color: #ccc;
-}
 #main{
 
 }
@@ -95,6 +11,7 @@ img{
     left: 0;
     right: 0;
     z-index: 1;
+    overflow: hidden;
 }
 #nav{
     display:inline-block;
@@ -151,17 +68,27 @@ img{
 {
     font-size: 14px;
 }
+#header .mobile-menu-btn,
 #header .search-btn
 { 
     float: right;
     padding: 0 21px;   
     
 }
+
+
 #header .search-btn:hover
 {
     background-color: #ff4434;
     cursor: pointer;
 }
+#header .mobile-menu-btn:hover{
+    background-color: #ccc;
+}
+#header .mobile-menu-btn:hover .menu-icon{
+    color: #000;
+}
+#header .menu-icon,
 #header .search-icon
 {
     color: #fff;
@@ -490,18 +417,4 @@ img{
     to{
         opacity: 1;
     }
-}
-
-/* PC */
-@media (min-width:1024px) {
-    
-}
-/* TABLET */
-@media (min-width:740px) and (max-width:1023px) {
-    
-}
-
-/* MOBILE */
-@media (max-width:740px) {
-    
 }
