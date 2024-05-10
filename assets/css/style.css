@@ -168,7 +168,8 @@
     line-height: 1.6;
 }
 #content .member-list{
-    margin-top: 40px;
+    margin-top: 32px;
+    /* margin-top: 40px; */
     /* cách 1 giải quyết khi các item con sử dụng float , item cha không bao bọc được hết */
     /* overflow: hidden; */
 }
@@ -224,7 +225,7 @@
 }
 /* Places */
 .places-list{
-    margin-top: 32px;    
+    margin-top: 16px;    
 }
 
 .place-img{
