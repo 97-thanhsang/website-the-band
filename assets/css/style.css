@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 html{
+    scroll-behavior: smooth;
     font-family: Helvetica,Arial,sans-serif;
 }
 ul{
@@ -201,9 +202,12 @@ img{
 }
 #content .content-section{
     width: 800px;
+    max-width: 100%;
     padding: 64px 0 112px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 #content .section-heading,
 #content .section-sub-heading
@@ -486,4 +490,18 @@ img{
     to{
         opacity: 1;
     }
+}
+
+/* PC */
+@media (min-width:1024px) {
+    
+}
+/* TABLET */
+@media (min-width:740px) and (max-width:1023px) {
+    
+}
+
+/* MOBILE */
+@media (max-width:740px) {
+    
 }
