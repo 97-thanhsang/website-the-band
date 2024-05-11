@@ -264,6 +264,14 @@
     font-size: 18px;
     line-height: 1.4;
 }
+.contact-info a
+{
+    color: #7fa8ff;
+}
+.contact-info a:hover
+{
+    opacity: 0.6;
+}
 .contact-info i[class*="ti-"] {
     width: 30px;
     display: inline-block;
