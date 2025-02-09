@@ -1,5 +1,5 @@
 
 # the band
 
-![alt text](theband.PNG)
+![alt text](assets/theband.PNG)
 
